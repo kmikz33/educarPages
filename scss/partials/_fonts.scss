@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+h4 {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    color: $primaryColor;
+}
+
+h5 {
+    color: $mediumGrey;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+
+._light-grey {
+    color: $lightGrey;
+}

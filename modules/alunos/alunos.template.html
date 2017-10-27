@@ -1,0 +1,25 @@
+<h4>Lista de alunos</h4>
+<div class="search-form row">
+    <a href="#">
+        <i class="material-icons icon">search</i>
+    </a>
+    <input type="search" placeholder="Pesquisar por nome" ng-model="inputSearch">
+</div>
+<div class="results-list">
+    <ul>
+        <li class="row student" ng-click="setActive(aluno)" ui-sref="alunos({id: aluno.id})" ng-repeat="aluno in alunos | filter: {name: inputSearch} | orderBy: 'name'" ng-class="{active : activeMenu === aluno}" >
+                <img class="circle -medium" ng-src="{{aluno.imgUrl}}">
+                <div class="list-data">
+                    <h5>{{aluno.name}}</h5>
+                    <div class="icons-list">
+                        <a href="#">
+                            <i class="material-icons icon">library_books</i>
+                        </a>
+                        <a href="#">
+                            <i class="material-icons icon">school</i>
+                        </a>
+                    </div>
+                </div>
+        </li>
+    </ul>
+</div>

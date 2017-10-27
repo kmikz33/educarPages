@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Educar</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+    <script src="educarApp.js"></script>
+    <script src="/js/config.js"></script>
+    <script src="modules/alunos/alunos.module.js"></script>
+    <script src="modules/alunos/alunos.config.js"></script>
+    <script src="modules/alunos/alunos.service.js"></script>
+    <script src="modules/alunos/alunos.component.js"></script>
+    <script src="modules/alunos/alunos.controller.js"></script>
+    <script src="modules/alunos/atividades.controller.js"></script>
+</head>
+
+<body ng-app="educarApp">
+    <header class="page-header row">
+        <div class="container -text-end">
+            <ul>
+                <li>
+                    <a>Alunos</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main class="container">
+        <div class="title">
+            <h2>
+                <strong>Acompanhe alunos</strong> nas atividades e auto avaliações</h2>
+            <p>Você tem acesso apenas a informações relacionadas as turmas em que leciona</p>
+        </div>
+        <div class="filters">
+            <div class="filters-nav row -space-between">
+                <h4>Filtros</h4>
+                <nav>
+                    <ul class="row">
+                        <li>
+                            <a href="#" class="_light-grey">Ocultar filtros</a>
+                        </li>
+                        <li>
+                            <a href="#">Adicionar filtro</a>
+                        </li>
+                        <li>
+                            <a href="#" class="_primary-color">Salvar filtro</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="filters-content row wrap">
+                <form>
+                    <label>Turmas</label>
+                    <div class="row">
+                        <div class="chip">Em 2016
+                            <a href="#" class="close">x</a>
+                        </div>
+                        <div class="chip">Em 2017
+                            <a href="#" class="close">x</a>
+                        </div>
+                    </div>
+                </form>
+                <form>
+                    <label>Jornadas</label>
+                    <div class="row">
+                        <div class="chip">Mundo do trabalho
+                            <a href="#" class="close">x</a>
+                        </div>
+                        <div class="chip">Mundo do trabalho
+                            <a href="#" class="close">x</a>
+                        </div>
+                    </div>
+                </form>
+                <form>
+                    <label>Atividades</label>
+                    <div class="row">
+                        <div class="chip">El empleo
+                            <a href="#" class="close">x</a>
+                        </div>
+                    </div>
+                </form>
+                <form>
+                    <label>Nível de desenvolvimento</label>
+                    <div class="row">
+                        <div class="chip">Sei fazer com ajuda
+                            <a href="#" class="close">x</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="content-board row">
+            <alunos-component class="list flex-4"></alunos-component>
+            <div ui-view="atividades" class="flex-8 -marged">
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

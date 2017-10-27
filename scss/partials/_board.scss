@@ -1,0 +1,249 @@
+button {
+    display: block;
+    padding: 15px;
+    border: 0;
+    background-color: $primaryColor;
+    color: white;
+    text-transform: capitalize;
+    font-size: 22px;
+    margin: 15px auto 0 auto;
+}
+
+.content-board {
+    border-top: 1px solid $lighterGrey;
+    background: #f6f6f6;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+}
+
+.content-cards {
+    padding: 20px;
+
+    > :first-child {
+        margin-top: 0;
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.evaluations-board {
+    display: flex;
+    justify-content: center;
+
+    header {
+        padding-bottom: 10px;
+        border-bottom: 1px solid $whiteGrey;
+    }
+
+    h3{
+        color: $grey;
+        font-weight: 400;
+        text-transform: capitalize;
+        padding-bottom: 1px;
+    }
+}
+
+.results-founded {
+    h5 {
+        margin: 20px 60px 0 0;
+        text-transform: uppercase;
+        font-size: 16px;
+        color: $mediumGrey;
+
+        small {
+            display: block;
+            font-size: 16px;
+            margin-top: 15px;
+            color: $lightGrey;
+        }
+    }
+} 
+
+.evaluation-subtitles {
+
+    ul{
+        margin-top: 5px;
+        color: $lightGrey;
+        font-size: 14px;
+        justify-content: space-between;
+
+        li {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 15px;
+
+            .icon {
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+.pending-evaluation {
+    max-height: 100px;
+    overflow: hidden;
+    transition: all 1s;
+
+    header {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $whiteGrey;
+    }
+
+    textarea {
+        width: 100%;
+        height: 120px;
+        margin: 10px 0 20px 0;
+    }
+
+    .accept-evaluation {
+        nav {
+            display: none;
+        }
+    }
+
+    .profile-data {
+        small {
+            display: none;
+        }
+    }
+
+    h5 {
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: 20px;
+        text-transform: uppercase;
+    }
+
+    &.active {
+        max-height: 100vh;
+        transition: all 1s;
+
+        .profile-data {
+            margin-left: 25px;
+        
+            h3 {
+                font-size: 26px;
+            }
+
+            .accept-evaluation {
+                nav {
+                    display: block;
+                }
+            }
+
+            small {
+                display: block;
+            }
+    
+        }
+    }  
+}
+
+.profile-data {
+    margin-left: 25px;
+
+    h3 {
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 3.5px;
+        color: $mediumGrey;
+        transition: all 0.3s;
+    }
+
+    small {
+        font-size: 16px;
+        display: block;
+        text-transform: none;
+        letter-spacing: initial;
+        margin-top: 10px;
+        color: $lightGrey;
+        font-weight: 400;
+    }
+}
+
+.accept-evaluation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h5 {
+        letter-spacing: 0.5px;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    a {
+        color: $lightGrey;
+        font-size: 14px;
+    }
+
+
+}
+
+.activities-feed {
+    color: $grey;
+
+    li {
+        margin: 20px 0;
+    }
+
+    strong {
+        margin: 0 10px;
+    }
+}
+
+.self-evaluation {
+    h2 {
+        font-size: 26px;
+        text-transform: capitalize;
+        color: $mediumGrey;
+    }
+
+    h5 {
+        font-size: 18px;
+        font-weight: 600;
+        color: $lightGrey;
+        letter-spacing: 0.5px;
+    }
+
+    p {
+        margin: 10px 0;
+        color: $mediumGrey;
+        padding-right: 230px;
+
+        span {
+            color: $lightGrey;
+        }
+    }
+
+    a {
+        color: $lightGrey;
+        font-size: 16px;
+
+        i {
+            margin-right: 10px;
+        }
+    }
+}
+
+.criteria {
+    margin: 20px;
+    padding-left: 20px;
+    border-left: 1px solid $lighterGrey;
+
+    li {
+        margin-bottom: 20px;
+
+        nav {
+            li {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+

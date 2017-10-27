@@ -1,0 +1,156 @@
+<div class="evaluations-board card row">
+    <div class="results-founded">
+        <header>
+            <h4>Resultados encontrados</h4>
+        </header>
+        <div class="row">
+            <h5>Atividades
+                <small>{{resumo.atividade}}</small>
+            </h5>
+            <h5>Auto avaliações
+                <small>{{resumo.autoavaliacao}}</small>
+            </h5>
+        </div>
+    </div>
+    <div class="evaluation-subtitles flex-5">
+        <header>
+            <h3>Legenda autoavaliação</h3>
+        </header>
+        <ul class="row wrap">
+            <li>
+                <i class="material-icons icon -small -red circle">close</i>Ainda não sou capaz</li>
+            <li>
+                <i class="material-icons icon -small -orange circle">priority_high</i>Sou capaz com ajuda</li>
+            <li>
+                <i class="material-icons icon -small -blue circle">star</i>Ainda não sou capaz</li>
+            <li>
+                <i class="material-icons icon -small -green circle">done</i>Sou capaz com ajuda</li>
+        </ul>
+    </div>
+</div>
+<ul>
+    <li class="pending-evaluation card" ng-click="setActive(atividade)" ng-repeat="atividade in atividades track by $index" ui-sref="alunos.atividades({atividadeId: atividade.id})" ng-class="{active : activeMenu === atividade}">
+        <div>
+            <header class="row -space-between -align-center">
+                <div class="evaluation-profile row -align-center">
+                    <img class="circle" ng-src="{{atividade.responsavel.foto}}">
+                    <div class="profile-data">
+                        <h3>
+                            {{atividade.descricao}} {{aluno.id}}
+                            <small>{{atividade.responsavel.nome}}</small>
+                        </h3>
+                    </div>
+                </div>
+                <div class="accept-evaluation">
+                    <div class="icons-list">
+                        <a href="#">
+                            <i class="material-icons icon">library_books</i>
+                        </a>
+                        <a href="#">
+                            <i class="material-icons icon">school</i>
+                        </a>
+                    </div>
+                    <nav>
+                        <ul class="row -justify-end">
+                            <li>
+                                <a href="#">Aceitar</a>
+                            </li>
+                            <li>
+                                <a href="#">Recusar</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <textarea>
+                        </textarea>
+            <hr>
+            <div class="activities-feed">
+                <ul>
+                    <li class="row -align-center" ng-repeat="acontecimento in atividade.acontecimentos">
+                        <img class="circle -small" ng-src="{{acontecimento.usuario.foto}}">
+                        <strong>{{acontecimento.descricao}}</strong> encerrou a atividade
+                    </li>
+                </ul>
+            </div>
+            <div class="self-evaluation">
+                <header class="row -space-between -align-center">
+                    <h2>Auto autoavaliação</h2>
+                    <a href="#" class="row -align-center">
+                        <i class="material-icons">thumb_up</i> Aceitar critérios e finalizar</a>
+                </header>
+                <h5>Linguagens</h5>
+                <p>
+                    <span>Utilizar os conhecimentos e mecanismos das linguagens como meio de ampliar as possibilidades de acesso
+                        a informações, tecnologias e culturas.</span>
+                </p>
+                <p>Relacinar as tecnologias de comunicação e informação ao desenvolvimento das sociedades e ao conhecimento
+                    que elas produzem.
+                </p>
+                <div class="criteria">
+                    <ul>
+                        <li>
+                            <p>Compreender os acontecimentos sociais que influenciaram a 0p art.</p>
+                            <nav>
+                                <ul class="row">
+                                    <li>
+                                        <a href="#" class="icon -primary">
+                                            <i class="material-icons">thumb_up</i>Aceitar</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="icon -warn">
+                                            <i class="material-icons">chat_bubble</i>Pedir evidência</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="icon -reject">
+                                            <i class="material-icons">thumb_down</i>Rejeitar</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </li>
+                        <li>
+                            <p>Compreender os acontecimentos sociais que influenciaram a 0p art.</p>
+                            <nav>
+                                <ul class="row">
+                                    <li>
+                                        <a href="#" class="icon -primary">
+                                            <i class="material-icons">thumb_up</i>Aceitar</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="icon -warn">
+                                            <i class="material-icons">chat_bubble</i>Pedir evidência</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="icon -reject">
+                                            <i class="material-icons">thumb_down</i>Rejeitar</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </li>
+                        <li>
+                            <p>Compreender os acontecimentos sociais que influenciaram a 0p art.</p>
+                            <nav>
+                                <ul class="row">
+                                    <li>
+                                        <a href="#" class="icon -primary">
+                                            <i class="material-icons">thumb_up</i>Aceitar</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="icon -warn">
+                                            <i class="material-icons">chat_bubble</i>Pedir evidência</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="icon -reject">
+                                            <i class="material-icons">thumb_down</i>Rejeitar</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+
+<button ng-click="addMore()">Carregar mais...</button>

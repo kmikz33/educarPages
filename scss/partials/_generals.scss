@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+nav {
+    ul {
+        li:after {
+            content: ' ';
+            display: inline-flex;
+            align-items: inherit;
+            position: relative;
+            top: 1%; 
+            width: 2px;
+            height: 60%;
+            margin: 0 15px;
+            background-color: $lighterGrey;
+        }
+        
+        li:last-child::after {
+            width: 0;
+            margin: 0;
+        }
+    }
+}
+
+a {
+    color: $grey;
+    text-decoration: none;
+}
+
+._primary-color {
+    color: $primaryColor;
+}
+
+hr {
+    background-color: $whiteGrey;
+    height: 1px;
+    border: 0px;
+    margin-bottom: 25px;
+}

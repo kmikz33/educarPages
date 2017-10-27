@@ -1,0 +1,60 @@
+.icon {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &.-small {
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+    }
+
+    &.-red{
+        background-color: $red;
+        color: darken($red, 20%);
+    }
+
+    &.-blue {
+        background-color: $blue;
+        color: darken($blue, 20%);
+    }
+
+    &.-green {
+        background-color: $green;
+        color: darken($green, 20%);
+    }
+    
+    &.-orange {
+        background-color: $orange;
+        color: darken($orange, 20%);
+    }
+
+    &.-primary:hover {
+        color: $primaryColor;
+    }
+
+    &.-warn:hover {
+        color: $orange;
+    }
+
+    &.-reject:hover {
+        color: $purple;
+    }
+
+}
+
+.icons-list {
+    a {
+        margin-right: 10px;
+        color: $lightGrey;
+
+        &:hover {
+            color: $green;
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+}

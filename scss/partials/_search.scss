@@ -1,0 +1,26 @@
+.search-form {
+    border: 1px solid $whiteGrey;
+    margin-bottom: 10px;
+
+    .icon {
+        font-size: 32px !important;
+        border-right: 1px solid $whiteGrey;
+        padding: 20px 20px 15px 20px;
+        color: $lighterGrey;
+
+    }
+
+    input {
+        flex: 1;
+        border: 0;
+        font-size: 18px;
+        position: relative;
+        padding-left: 25px;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+
+    input::placeholder {
+        color: $lighterGrey;
+    }
+}
